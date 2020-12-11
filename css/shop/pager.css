@@ -1,0 +1,44 @@
+/***************************************************
+    
+	style info : M_pager
+	
+***************************************************/
+
+ul.M_pager{
+	margin:16px auto 10px;
+	padding:0;
+	text-align:center;
+}
+ul.M_pager li {
+      display:inline;
+	  margin:0;
+	  padding:0;
+	  list-style:none;
+	  font-size:12px;
+}
+ul.M_pager li a{
+	padding:2px 6px 0;
+	background:#eee;
+	border:1px solid #ccc;
+	text-decoration:none;
+}
+ul.M_pager li.prev a,
+ul.M_pager li.next a{
+      background:#fff;
+	  border:none;
+}
+ul.M_pager li.prev a:hover,
+ul.M_pager li.next a:hover{
+	text-decoration:underline;
+}
+ul.M_pager li a:visited {
+      text-decoration: none;
+}
+ul.M_pager li a:hover,
+ul.M_pager li a:active {
+      text-decoration: none;
+}
+ul.M_pager li.active {
+      font-weight: bold;
+	  padding:2px 6px 0;
+}

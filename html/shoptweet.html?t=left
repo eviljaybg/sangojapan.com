@@ -1,0 +1,295 @@
+<html>
+<body>
+<style>
+<!--    
+#tweetBox *{
+	margin:0;
+	padding:0;
+	word-break:break-all;
+}
+#tweetBox img{
+	border:none;	
+}
+#tweetBox{
+    background:#FFFFFF;
+	padding:10px;
+}
+#tweetLink{
+	position:absolute;
+	right:-5px;
+	top:-5px;
+	width:34px;	
+}
+#tweetHead {
+    padding-bottom:5px;
+    position:relative;
+    width:auto;
+    height:auto;
+}
+
+/* shoptweet title */
+#tweetName{
+	color:#000000;	
+	font-size:13px;
+	margin-right:25px;
+}
+
+/* icon */
+#tweetBox .tweetSection{
+	position:relative;
+	margin-bottom:10px;	
+}
+#prfImg{
+	width:45px;
+	height:45px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+#prfImg img{
+	width:45px;
+}
+
+/* content */
+#tweetBox .tweetDetail{
+    background:#ffffff;
+    color:#333333;
+	margin:5px 0 5px 50px;
+	padding-bottom:21px;
+	overflow:hidden;
+	_zoom:1;
+}
+#tweetBox .tweetDetail div{
+	margin:5px 5px 0 5px;	
+}
+
+/* account */
+#tweetBox .tweetAccount{
+	padding:5px 0 0;
+}
+#tweetBox .tweetAccount a{
+	text-decoration:none;
+}
+#tweetBox .tweetName2{
+	font-weight:bold;
+	font-size:13px;
+}
+#tweetBox a .tweetName2 {
+	color:#333;		
+}
+#tweetBox .tweetId{
+	font-size:10px;
+}
+#tweetBox a .tweetId{
+	color:#999;	
+}
+
+/* tweet */
+.tweetContent{
+	font-size:12px;
+}
+.tweetContent a{
+    color:#999999;
+	font-size:12px;
+    text-decoration:none;
+}
+
+#tweetBox .tweetRetweeted{
+	margin:3px 0;
+}
+#tweetBox .tweetRetweeted span{
+	width:19px;
+	height:16px;
+	display:block;
+	background:url(/images/shoptweet/retweetedIcon.png) no-repeat;
+	text-indent:-9999em;
+	float:left;
+	margin-right:5px;
+}
+#tweetBox .tweetRetweeted,
+#tweetBox .tweetRetweeted a{
+	color:#999;
+	font-size:11px;
+    text-decoration:none;
+}
+/* data */
+#tweetBox .tweetData{
+	margin-top:5px;
+	font-size:10px;	
+}
+
+#tweetBox .tweetData a{
+	color:#999999;
+    text-decoration:none;
+}
+
+/* btn */
+#tweetBox .tweetAction{
+	position:absolute;
+	bottom:5px;	
+	right:5px;
+    height:16px;
+}
+#tweetBox .tweetAction li{
+	float:left;	
+	list-style:none;
+	margin-left:1px;
+    width:19px;
+	height:16px;
+}
+#tweetBox .tweetAction li a{
+	display:block;
+	width:19px;
+	height:16px;	
+	text-indent:-9999em;
+	background-position:0 0;
+}
+#tweetBox .tweetAction li a.reply{
+	background:url(/images/shoptweet/replyIcon.png) no-repeat;	
+}
+#tweetBox .tweetAction li a.retweet{
+	background:url(/images/shoptweet/retweetIcon.png) no-repeat;	
+}
+#tweetBox .tweetAction li a.fav{
+	background:url(/images/shoptweet/favIcon.png) no-repeat;	
+}
+#tweetBox .tweetAction li a:hover{
+	background-position:0 -16px;	
+}
+
+/* btm */
+#btm{
+	position:relative;
+	height:10px;
+}
+*html #btm{
+    height:15px;
+}
+#back{
+	position:absolute;
+	left:0;
+	top:3px;
+}
+#next{
+	position:absolute;
+	right:0;
+	top:3px;
+}
+.imglink{
+    border:0px;
+}
+
+/* clearfix */
+.clearfix:after {
+content:"";
+display:block;
+clear:both;
+}
+	/* for IE6 */
+	* html .clearfix {
+	display:inline-block;
+	}
+	/* for IE7 */
+	*+html .clearfix {
+	display:inline-block;
+	}
+-->
+</style>
+<div id="tweetBox">
+    <div class="clearfix" id="tweetHead">
+        <p id="tweetName">最新情報を発信中</p>
+    	<a href="https://twitter.com/" target="_blank"><img src="/images/shoptweet/twitter-bird-light-bgs.png" id="tweetLink"></a>
+    </div>
+    <div id="tweet">
+                <div class="tweetSection clearfix">
+            <div id="prfImg">
+                <a href="https://twitter.com/hondanasango" target="_blank">
+                    <img src="http://pbs.twimg.com/profile_images/3440936227/777e8551505869f091adf35f78027740_normal.jpeg" />
+                </a>
+            </div>
+            <div class="tweetDetail">
+                <div class="tweetAccount clearfix">
+                    <a href="https://twitter.com/hondanasango" target="_blank">
+                        <span class="tweetName2">失敗しない！本棚通販サンゴ</span>
+                        <span class="tweetId">@hondanasango</span>
+                    </a>
+                </div>
+                <div class="tweetMain">
+                    <p class="tweetContent">
+                        千葉県より【本棚 幅45cm 本棚】をご購入いただきました！ 06:24:50                    </p>
+                                        <p class="tweetData">
+                        <a href="https://twitter.com/hondanasango/statuses/633026701501435904" target="_blank">
+                            8月17日                        </a>
+                    </p>
+                </div>    
+                <ul class="tweetAction clearfix">
+                    <li><a href="https://twitter.com/intent/tweet?in_reply_to=633026701501435904" class="reply" target="_blank">tweet</a></li>
+                    <li><a href="https://twitter.com/intent/retweet?tweet_id=633026701501435904" class="retweet" target="_blank">retweet</a></li>
+                    <li><a href="https://twitter.com/intent/favorite?tweet_id=633026701501435904" class="fav" target="_blank">favorite</a></li>
+                </ul>
+            </div>
+        </div>
+                <div class="tweetSection clearfix">
+            <div id="prfImg">
+                <a href="https://twitter.com/hondanasango" target="_blank">
+                    <img src="http://pbs.twimg.com/profile_images/3440936227/777e8551505869f091adf35f78027740_normal.jpeg" />
+                </a>
+            </div>
+            <div class="tweetDetail">
+                <div class="tweetAccount clearfix">
+                    <a href="https://twitter.com/hondanasango" target="_blank">
+                        <span class="tweetName2">失敗しない！本棚通販サンゴ</span>
+                        <span class="tweetId">@hondanasango</span>
+                    </a>
+                </div>
+                <div class="tweetMain">
+                    <p class="tweetContent">
+                        京都府より【耐震 つっぱり本棚（書棚）　幅60cm 奥行19cm　地震で倒れない本棚　天井つっぱり　突っ張り書架　防災 地震に強い 防災家具 耐震】をご購入いただきました！ 03:08:29                    </p>
+                                        <p class="tweetData">
+                        <a href="https://twitter.com/hondanasango/statuses/630440658897993728" target="_blank">
+                            8月10日                        </a>
+                    </p>
+                </div>    
+                <ul class="tweetAction clearfix">
+                    <li><a href="https://twitter.com/intent/tweet?in_reply_to=630440658897993728" class="reply" target="_blank">tweet</a></li>
+                    <li><a href="https://twitter.com/intent/retweet?tweet_id=630440658897993728" class="retweet" target="_blank">retweet</a></li>
+                    <li><a href="https://twitter.com/intent/favorite?tweet_id=630440658897993728" class="fav" target="_blank">favorite</a></li>
+                </ul>
+            </div>
+        </div>
+                <div class="tweetSection clearfix">
+            <div id="prfImg">
+                <a href="https://twitter.com/hondanasango" target="_blank">
+                    <img src="http://pbs.twimg.com/profile_images/3440936227/777e8551505869f091adf35f78027740_normal.jpeg" />
+                </a>
+            </div>
+            <div class="tweetDetail">
+                <div class="tweetAccount clearfix">
+                    <a href="https://twitter.com/hondanasango" target="_blank">
+                        <span class="tweetName2">失敗しない！本棚通販サンゴ</span>
+                        <span class="tweetId">@hondanasango</span>
+                    </a>
+                </div>
+                <div class="tweetMain">
+                    <p class="tweetContent">
+                        東京(23区内)より【薄型 隙間 本棚 スリムラック  幅55.5cm　すき間　整理棚　スキマ　書棚　書架】をご購入いただきました！ 16:56:12                    </p>
+                                        <p class="tweetData">
+                        <a href="https://twitter.com/hondanasango/statuses/625213214385549312" target="_blank">
+                            7月26日                        </a>
+                    </p>
+                </div>    
+                <ul class="tweetAction clearfix">
+                    <li><a href="https://twitter.com/intent/tweet?in_reply_to=625213214385549312" class="reply" target="_blank">tweet</a></li>
+                    <li><a href="https://twitter.com/intent/retweet?tweet_id=625213214385549312" class="retweet" target="_blank">retweet</a></li>
+                    <li><a href="https://twitter.com/intent/favorite?tweet_id=625213214385549312" class="fav" target="_blank">favorite</a></li>
+                </ul>
+            </div>
+        </div>
+            </div>
+    <div id="btm">
+        <span id="back"><a href="#shoptweet"><img src="/images/back.png" class="imglink"></a></span>
+        <span id="next"><a href="JavaScript:loadtwitter_left('/html/shoptweet.html?p=2&t=left', 'left_shoptweet');"><img src="/images/next.png" class="imglink"></a></span>
+    </div>
+</div>
+</body>
+</html>

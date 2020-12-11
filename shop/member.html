@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>失敗しない！本棚通販サンゴ</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
+
+</head>
+<body>
+    <form name="ssl_login_form" method="post" action="https://www.makeshop.jp/ssl/slogin/" target="_top" style="margin:0;padding:0;">
+        <input type="hidden" name="db" value="sangoshop">
+        <input type="hidden" name="type" value="">
+        <input type="hidden" name="opt" value="">
+        <input type="hidden" name="ssl_login_return_url" value="/">
+        <input type="hidden" name="user_id" value="">
+    </form>
+
+    <script language="JavaScript">
+    function ssl_login(type, etc, user_id){
+        var etc = (typeof(etc) != "undefined") ? etc : '';
+        var user_id = (typeof(user_id) != "undefined") ? user_id : '';
+        var msg_index = {
+            "member" : "登録済みの会員情報を変更するにはログインが必要です。\nログイン画面へ移動します。\n会員登録は、ログイン画面から会員登録画面へ移動してください。",
+            "reserve" : "ポイント照会にはログインが必要です。\nログイン画面へ移動します。",
+            "confirm" : "注文履歴にはログイン、または注文番号が必要です。\nログイン画面へ移動します。"
+        };
+
+        if(typeof(msg_index[type]) != "undefined"){
+            alert(msg_index[type]);
+        }
+        
+
+        // 上段 + メインフレームタイプの場合return_url
+        if(typeof(parent.main) != "undefined" && typeof(parent.main.location) != "undefined"){
+            var rtn_url = 0;
+            var tmp = parent.main.location.href.split("/");
+            tmp.splice(0,3);
+
+            if(/^[main][a-z0-9]+\.html/.test(tmp[1])){
+                rtn_url = 1;
+            }else if(tmp[0] == 'shopdetail'){
+                rtn_url = 1;
+            }else if(tmp[0] == 'shopbrand'){
+                rtn_url = 1;
+            }else if(tmp[1] == 'basket.html'){
+                rtn_url = 1;
+            }
+
+            if(rtn_url == 1){
+                document.ssl_login_form.ssl_login_return_url.value = '/' + tmp.join("/");
+            }
+        }
+        document.ssl_login_form.type.value = type;
+        document.ssl_login_form.opt.value = etc;
+        document.ssl_login_form.user_id.value = user_id;
+        document.ssl_login_form.submit();
+    }
+    </script>    <form name="ssl_idinfo_form" style="margin:0;padding:0;" method="post" action="https://www.makeshop.jp/ssl/ssl_idinfo/ssl_idinfo.html" target="sslIdinfoWindow">
+        <input type="hidden" name="db" value="sangoshop">
+        <input type="hidden" name="login_id" value="">
+        <input type="hidden" name="login_id_key" value="">
+    </form>
+    <script language="JavaScript">
+    function ssl_idinfo(){
+        window.open("about:blank", "sslIdinfoWindow", "width=700,height=700,scrollbars=yes,resizable=yes");
+        document.ssl_idinfo_form.submit();
+    }
+    </script>    <form name="ssl_confirm_form" style="margin:0;padding:0;" method="post" action="https://www.makeshop.jp/ssl/ssl_confirm/confirm.html" target="sslShopConfirmWindow">
+        <input type="hidden" name="db" value="sangoshop">
+        <input type="hidden" name="login_id" value="">
+        <input type="hidden" name="login_id_key" value="">
+        <input type="hidden" name="type" value="confirm">
+    </form>
+    <script language="JavaScript">
+    function ssl_confirm(){
+        window.open("about:blank", "sslShopConfirmWindow", "width=760,height=620,scrollbars=yes,resizable=yes");
+        document.ssl_confirm_form.submit();
+    }
+    </script>
+<script language="JavaScript">
+ssl_login('member');</script>
+</body>
+</html>

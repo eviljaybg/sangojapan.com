@@ -1,0 +1,113 @@
+/* User's Guide CSS*/
+
+#guideMain{
+    width:600px;
+    margin:auto;
+    text-align:center;
+    font-size:12px;
+    line-height:140%;
+    }
+
+#guideMain div#guideLink{
+    width:600px;
+    margin:10px 0;
+    text-align:right;
+    clear: both;
+    }
+
+#guideMain #guideLink ul{
+    width:600px;
+    text-align:center;
+    }
+
+#guideMain #guideLink ul li{
+    display:inline;
+    padding:0 7px;
+    }
+
+#guideMain #method,
+#guideMain #payment,
+#guideMain #delivery,
+#guideMain #tax,
+#guideMain #return{
+    width:580px;
+    margin:20px auto;
+    padding:60px 0 10px;
+    }
+
+#guideMain #method p,
+#guideMain #payment p,
+#guideMain #delivery p,
+#guideMain #tax p,
+#guideMain #return p{
+    text-align:left;
+    width:540px;
+    color:#666;
+    }
+
+#guideMain pre{
+    text-align:left;
+    width:540px;
+    color:#666;
+}
+
+#guideMain #method{
+    background:url(/images/useguide/3/guideTitle_method02.gif) no-repeat;
+    }
+#guideMain #payment{
+    background:url(/images/useguide/3/guideTitle_pay02.gif) no-repeat;
+    }
+#guideMain #delivery{
+    background:url(/images/useguide/3/guideTitle_delivery02.gif) no-repeat;
+    }
+#guideMain #tax{
+    background:url(/images/useguide/3/guideTitle_tax02.gif) no-repeat;
+    }
+#guideMain #return{
+    background:url(/images/useguide/3/guideTitle_return02.gif) no-repeat;
+    }
+
+/* clearfix */
+.clearfix {
+    display:block;
+    }
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    }
+.clearfix { 
+    display: inline-block; 
+    }
+    
+.clear{
+    clear:both;
+    }
+
+/* reset */
+#guideMain div,
+#guideMain p,
+#guideMain ul,
+#guideMain ol,
+#guideMain li,
+#guideMain dl,
+#guideMain dt,
+#guideMain dd {
+    margin:0;
+    padding:0;
+}
+#guideMain ul li,
+#guideMain ol li {
+    list-style-type: none;
+}
+#guideMain a {
+    text-decoration: none;
+}
+#guideMain img {
+    border: 0;
+}
+#guideMain img,#guideMain input,#guideMain select,#guideMain textarea {
+    vertical-align: middle;
+}

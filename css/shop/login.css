@@ -1,0 +1,192 @@
+
+div#loginMain img{ border:0;}
+
+/* member */
+div#loginMain{
+    width:630px;
+    margin:auto;
+    text-align:center;
+    font-size:12px;
+    color:#333;
+    line-height:140%;
+    }
+
+div#loginMain p#login{
+    text-align:left;
+    width:580px;
+    }
+        
+div#loginform{
+    width:580px;
+    margin: 15px auto;
+    background:url(/images/login/bg_loginBottom.gif) bottom no-repeat;
+    }
+
+div#loginform input,
+div#orderInput input{
+    border:1px solid #CCC;
+    margin:0 10px;
+    width:260px;
+	padding:2px;
+    }
+
+div#orderInput #order input{
+	width:120px;	
+}
+
+div#loginform dl{
+    margin:10px auto;
+    width: 480px;
+    }
+
+div#loginform dl dt{
+    width:130px;
+    text-align:right;
+    float: left;
+    margin: 6px 2px;
+	clear:left;
+    }
+
+div#loginform dl dd{
+    width:320px;
+    text-align:left;
+    margin: 6px 2px;
+	float:left;
+    }
+div#loginform dl dd p{
+	margin:4px 10px 0;
+	font-size:11px;	
+	color:#666;
+}
+div.btn{
+    width:auto;
+    text-align:center;
+    clear: both;
+    margin: 6px auto;
+    }
+
+div#loginform p#forgot{
+    margin:0 auto 20px;
+    text-align: center;
+    }
+
+/* under area */
+div#twin{
+    width:580px;
+    margin: 15px auto;
+    background:url(/images/login/twinBottom.gif) bottom no-repeat;
+    color:#333;
+    line-height:140%;
+    }
+
+div#beginner,
+div#nomember{
+    width:280px;
+    height:160px;
+    }
+
+div#beginner{
+    float:left;
+    }
+    
+div#nomember{
+    float:right;
+    }
+
+div#beginner h3,
+div#nomember h3{
+    width:230px;
+    text-align:left;
+    font-size: 14px;
+    margin: 0 auto;
+    }
+
+div#beginner p.info,
+p#attention{
+    width:240px;
+    margin: 10px auto;
+    text-align:left;
+    }
+
+p#attention{
+    color:#FF0000;
+    text-align:left;
+    }
+
+img.mgnT30{
+    margin-top:30px;
+    }
+    
+/* confirm */
+p#support{
+    text-align:center;
+    font-weight:bold;
+    }
+
+div#orderInput{
+    width:580px;
+    margin:auto;
+    background:url(/images/login/bg_nomemberBottom.gif) no-repeat bottom;
+    height: 160px;
+    color:#333;
+    line-height:140%;
+}
+
+div#orderInput h3{
+    font-size:14px;
+    text-align:left;
+    width:500px;
+    margin:0 auto;
+    color:#333;
+}
+
+div#orderInput p#order{
+    text-align:center;
+    margin:10px auto;
+    }
+    
+/* shida */
+div#twin{
+    width:580px;
+    margin: 15px auto;
+    background:url(/images/login/twinBottom.gif) bottom no-repeat;
+    }
+
+/* miyamoto */
+.mgT10 { margin-top: 10px;}
+.mgR10 { margin-right: 10px;}
+.mgB10 { margin-bottom: 10px;}
+.mgL10 { margin-left: 10px;}
+.mgT20 { margin-top: 20px;}
+.mgR20 { margin-right: 20px;}
+.mgB20 { margin-bottom: 20px;}
+.mgL20 { margin-left: 20px;}
+.mgT40 { margin-top: 40px;}
+.mgR40 { margin-right: 40px;}
+.mgB40 { margin-bottom: 40px;}
+.mgL40 { margin-left: 40px;}
+
+
+/* clearfix */
+.clearfix {
+    display: inline-table;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/* Hides from IE-mac \*/
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}

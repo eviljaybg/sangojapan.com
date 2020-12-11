@@ -1,0 +1,1279 @@
+<html>
+<head>
+<title>パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ | 本棚通販</title>
+<meta name="description" content="「本棚通販」で取り扱う商品「パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ」の紹介・購入ページ">
+<meta name="keywords" content="パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ,本棚,マガジンラック,本棚通販">
+<meta name="author" content="">
+<meta property="og:image" content="http://www.sangojapan.com/shopimages/sangoshop/0040300000072.jpg"/>
+<META HTTP-EQUIV='CHARSET' CONTENT='EUC-JP'>
+<META HTTP-EQUIV='CONTENT-LANGUAGE' CONTENT='ja'>
+<meta http-equiv='Content-Type' content='text/html; charset=EUC-JP'>
+<link rel="stylesheet" href="/design/sangoshop/m_sys_common.css?1348636739" type="text/css" />
+<link rel="stylesheet" href="/css/shop/import.css" type="text/css">
+<script language=JavaScript src="/html/script.js"></script>
+<style type="text/css">
+div.tokup_tipbox {
+    font-size:9pt;
+    font-family:"MS Pゴシック";
+    color:black;
+    text-align: left;
+    border:1px black solid;
+    background:#FCD95E;
+    padding:5px 5px;
+}
+</style>
+<script language="JavaScript">
+function imageview(imagename) {
+    if (imagename.length==0) { 
+        alert("拡大イメージ画像がありません"); return ; 
+    }
+    window.open('/shop/image_view.html?image=' + imagename, "win", "height=350,width=450,toolbar=no,menubar=no,resizable=yes,status=no,scrollbars=yes");
+}
+
+// オプション在庫確認ウィンドウを開く
+function openOptionWindow(){
+    w = window.open("","option50","width=680,height=400,scrollbars=yes,resizable=yes");
+    document.form1.target = "option50";
+    document.form1.action = "/makeshop/newmanager/option50.html";
+    document.form1.submit();
+    document.form1.action = "/shop/basket.html";
+    document.form1.target = "";
+}
+function updateOptionPriceAjax(uid, callback){
+    var id1 = '';
+    var id2 = '';
+    if(document.form1.brand_option){
+        // 表形式のオプション
+        if(document.form1.brand_option.length){
+            var brand_option_length = document.form1.brand_option.length;
+            for(var i=0; i<brand_option_length; i++){
+                if(document.form1.brand_option[i].checked){
+                    var tmp = String(document.form1.brand_option[i].value).split('_');
+                    id1 = tmp[0];
+                    id2 = tmp[1];
+                    break;
+                }
+            }
+        }else{
+            if(document.form1.brand_option.checked){
+                var tmp = String(document.form1.brand_option.value).split('_');
+                id1 = tmp[0];
+                id2 = tmp[1];
+            }
+        }
+    }else{
+        // プルダウン形式のオプション
+        id1 = document.form1.spcode ? document.form1.spcode.value : '';
+        if(String(id1) === '0'){
+            return;
+        }
+        id2 = document.form1.spcode2 ? document.form1.spcode2.value : '';
+        if(String(id2) === '0'){
+            return;
+        }
+    }
+
+    var xmlhttp = false;
+    if(typeof ActiveXObject != "undefined"){
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (e) {
+            xmlhttp = false;
+        }
+    }
+    if(!xmlhttp && typeof XMLHttpRequest != "undefined") {
+        xmlhttp = new XMLHttpRequest();
+    }
+    xmlhttp.open('POST', '/shop/shopdetail_option.html', true);
+    xmlhttp.onreadystatechange = function(){ 
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){ 
+            var option_stock = eval('(' + xmlhttp.responseText + ')');
+            callback(option_stock);
+        }
+    }
+    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xmlhttp.send('db=sangoshop&uid=' + uid + '&option1_id=' + id1 + '&option2_id=' + id2 + '&login_id=');
+}
+function send(temp,temp2) {
+    if(document.form1.brand_option){
+        // 表形式のオプション
+        var id1 = 0;
+        var id2 = 0;
+        if(document.form1.brand_option.length){
+            var brand_option_length = document.form1.brand_option.length;
+            for(var i=0; i<brand_option_length; i++){
+                if(document.form1.brand_option[i].checked){
+                    var tmp = String(document.form1.brand_option[i].value).split('_');
+                    id1 = tmp[0];
+                    id2 = tmp[1];
+                    break;
+                }
+            }
+        }else{
+            if(document.form1.brand_option.checked){
+                var tmp = String(document.form1.brand_option.value).split('_');
+                id1 = tmp[0];
+                id2 = tmp[1];
+            }
+        }
+        if(id1 == 0){
+            alert('オプションを選択してください。');
+            return;
+        }
+        document.form1.spcode.value = id1;
+        document.form1.spcode2.value = id2;
+    }else{
+        // プルダウン形式のオプション
+        if (document.form1.spcode && document.form1.spcode.selectedIndex < 2) {
+            alert('オプションを選択してください。');
+            document.form1.spcode.focus();
+            return;    
+        } 
+        if (document.form1.spcode2 && document.form1.spcode2.selectedIndex < 2) {
+            alert('オプションを選択してください。');
+            document.form1.spcode2.focus();
+            return;    
+        } 
+    }
+    
+    if (document.form1.amount.value.length==0)
+    {  
+        alert("注文数量を入力して下さい"); document.form1.amount.focus();
+        return; 
+    }
+
+    var amountstr = document.form1.amount.value.toString();
+    if ( (isNaN(document.form1.amount.value)) || (amountstr.match(/[^0-9]/)))
+    {
+        alert("注文数量には半角数字を入力して下さい");
+        document.form1.amount.focus(); return; 
+    }
+    if(temp=="baro") document.form1.ordertype.value='baro';
+    if(temp2 == "quick"){ temp2 = document.getElementById("option_count").value; }
+    if(temp2!=""){
+        document.form1.opts.value="";
+        var option_group = document.form1.mulopt;
+
+        
+        for(i=0;i<temp2;i++){
+            if(document.form1.optselect[i].value==1 && option_group[i].selectedIndex==0){
+                alert('必須選択項目です.オプションを必ず選んで下さい');
+                option_group[i].focus();
+                return;
+            }
+            document.form1.opts.value+=option_group[i].selectedIndex+",";
+        }
+    }
+    
+   // クイック購入
+    if(temp=="quick") {
+        document.form1.ordertype.value='quick';
+        document.form1.action = "/shop/quick_order.html";
+    }   
+    document.form1.submit();
+}
+
+function count_change(temp)
+{
+    var cnt=document.form1.amount.value;
+    if(temp==0){
+        cnt++;
+    }else if(temp==1){
+        if(cnt > 1) cnt--;
+    }
+    document.form1.amount.value=cnt;
+}
+
+
+function login_chk(tmp){
+    alert ("会員専用のサービスです。まずはログインして下さい。");
+    location.href="/shop/member.html?type=wish&brandcode="+tmp;
+}
+
+function product_mail(temp,temp2) {
+    window.open("/html/question_mail.html?brandcode="+temp+"&xcode="+temp2,"","width=460,height=500,scrollbars=yes");
+}
+
+function tweet_popup() {
+    window.open("/shop/tweet_popup.html?url=http%3A%2F%2Fwww.sangojapan.com%2Fna-nj-0009.html&itemname=%A5%D1%A1%BC%A5%C6%A1%BC%A5%B7%A5%E7%A5%F3%20%A5%D1%A1%BC%A5%C6%A1%BC%A5%B7%A5%E7%A5%F3%20%C6%CD%A4%C3%C4%A5%A4%EA%A5%DE%A5%AC%A5%B8%A5%F3%A5%E9%A5%C3%A5%AF%20%C9%FD60%A3%E3%A3%ED&shopname=%CB%DC%C3%AA%C4%CC%C8%CE&text=", 'tweet_popup');
+    return;
+}
+
+function delivery_popup() {
+    window.open("/html/info.html?w=popup","","width=660,height=700,scrollbars=yes");
+}
+function friend_mail(temp) {
+    window.open("/html/friend_mail.html?brandcode="+temp,"","width=460,height=500,scrollbars=yes");
+}
+
+function go_login() {
+    alert('ログインの後、ご利用ください。');
+    document.location.href='/shop/member.html?type=wish&brandcode=004030000007';
+}
+
+// クイック購入ボタン表示/非表示
+function showQuickOrderButton(isGmoUser, isExistCard){
+    if(isGmoUser && document.getElementById('quick_order')){
+        switch (isExistCard){
+            case 2:	// カードチェック後、カード情報あり
+                document.cookie = "card_registered=true; path=/";
+            case 1:	// 何もしない
+                document.getElementById('quick_order').style.display = 'block';
+                break;
+            case 3:	// カードチェック後、カード情報なし
+                document.cookie = "card_registered=false; path=/";
+            case 0:	// エラー
+                break;
+        }
+    }
+}
+
+function overTip(boxObj) {
+    document.getElementById(boxObj).style.visibility = "visible";
+}
+function outTip(boxObj) {
+    document.getElementById(boxObj).style.visibility = "hidden";
+}
+</script>
+</head>
+<body bgcolor=#FFFFFF topmargin=0 leftmargin=0>
+
+<form name="all_view_top" method="post" action="/shop/shopbrand.html" style="margin: 0;padding: 0;">
+<input type="hidden" name="search" value="">
+</form>
+
+<!--▼container▼-->
+<a name="top"></a>
+<div id="M_container">
+<div id="header_box1">
+<h2>【失敗しない本棚通販】本棚・書棚の家具専門通販サイト</h2>
+[本棚]書棚の通販家具専門店・書籍収納家具通販【スライド書棚[本棚]・スライド式本棚・回転式書棚[本棚]・薄型コミック専用本棚・マガジンラック・耐震本棚・壁面収納本棚の家具通販はお任せ下さい。
+</div>
+	<!--▼ヘッダ▼-->
+	<div id="M_header" class="M_clearfix">
+
+		<!--▼ロゴ▼-->
+
+
+
+
+<!--▼▼看板▼▼-->
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2"><img src="http://www.sangojapan.com/design/sangoshop/header-01.gif" width="948" height="23" alt="失敗しない本棚通販"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td width="384"><a href="http://www.sangojapan.com/"><img src="http://www.sangojapan.com/design/sangoshop/header-02.gif" alt="本棚通販" width="384" height="55" border="0"></a></td>
+      <td width="564"><img src="http://www.sangojapan.com/design/sangoshop/header-03.gif" width="291" height="27" alt="支払方法"><img src="http://www.sangojapan.com/design/sangoshop/header-04.gif" width="273" height="27" alt="安心3ヶ月保証"><img src="http://www.sangojapan.com/design/sangoshop/header-05.gif" width="194" height="28" alt="営業時間"><a href="JavaScript:top_sendmail()"><img src="http://www.sangojapan.com/design/sangoshop/header-06.gif" alt="お問い合わせ" width="134" height="28" border="0"></a><img src="http://www.sangojapan.com/design/sangoshop/header-07.gif" alt="お問い合わせ電話番号" width="236" height="28" border="0"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><a href="http://www.sangojapan.com/"><img src="http://www.sangojapan.com/design/sangoshop/header-08.gif" alt="本棚通販TOPページ" width="140" height="22" border="0"></a><a href="http://www.sangojapan.com/html/company.html?code=sangoshop"><img src="http://www.sangojapan.com/design/sangoshop/header-09.gif" alt="会社概要" width="141" height="22" border="0"></a><a href="http://www.sangojapan.com/html/info.html"><img src="http://www.sangojapan.com/design/sangoshop/header-10.gif" alt="お支払い方法・送料" width="141" height="22" border="0"></a><a href="http://www.sangojapan.com/shopbrand/004/X/"><img src="http://www.sangojapan.com/design/sangoshop/header-11.gif" alt="商品一覧" width="141" height="22" border="0"></a><a href="http://www.sangojapan.com/shop/confirm_login.html"><img src="http://www.sangojapan.com/design/sangoshop/header-12.gif" alt="注文照会" width="141" height="22" border="0"></a><a href="http://www.sangojapan.com/shop/basket.html"><img src="http://www.sangojapan.com/design/sangoshop/header-13.gif" alt="買い物かごの中身" width="141" height="22" border="0"></a><img src="http://www.sangojapan.com/design/sangoshop/header-14.gif" width="103" height="22" border="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3" nowrap width="948" height="31" style="background-image : url(http://www.sangojapan.com/design/sangoshop/header-muryou.gif);background-repeat : no-repeat;" align="right"><!--▼検索窓-->
+        
+        <div id="M_searchBox">
+          <form action="/shop/shopbrand.html" method="post" name="top_search"  >
+            <p>
+              <input type="text" name="search" size="18" maxlength="12" class="search">
+              <a href="JavaScript:document.top_search.submit()"><img src="/design/sangoshop/search_button.gif" alt="検索" class="searchsubmit" width="81" height="21"></a></p>
+          </form>
+        </div></td>
+    </tr>
+    <tr>
+      <td colspan="3" height="0"></td>
+    </tr>
+  </tbody>
+</table>
+<!--▲▲看板▲▲-->
+
+<!--▼▼ヘッダーメニュー▼▼-->
+<ul id="nav2_lr">
+	<li><a href="http://www.sangojapan.com/shopbrand/004/022/X">本棚スライド<br>（スライド式書棚）</a></li>
+	<li><a href="http://www.sangojapan.com/shopbrand/004/024/X">薄型<br>コミック専用本棚</a></li>
+	<li><a href="http://www.sangojapan.com/shopbrand/004/028/X">業務用<br>A4本棚</a></li>
+	<li><a href="http://www.sangojapan.com/shopbrand/004/025/X">回転式本棚<br>（回転 書棚）</a></li>
+	<li><a href="http://www.sangojapan.com/shopbrand/004/027/X">耐震<br>つっぱり本棚</a></li>
+    <li><a href="http://www.sangojapan.com/shopbrand/004/026/X">扉付き本棚<br>（扉付 書棚）</a></li>
+</ul>
+<!--▲▲ヘッダーメニュー▲▲-->
+
+
+<img src="http://www.rakuten.ne.jp/gold/kagudoki/image/rank_pick2.jpg" width="948" height="56" border="0" alt="ランクインアイテム">
+<table cellpadding="1" cellspacing="0" width="948" class="toprank">
+<tbody>
+<tr>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004028000003/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb96009-10-1c.jpg?_ex=126x126" alt="Ａ４サイズ キングファイル対応 ５段　書棚" width="125" height="126" border="0"></a></td>
+<td width="10"></td>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004032000004/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/kagudoki/cabinet/9018-4color5.jpg?_ex=126x126" alt="シンプルモダンシェルフ W75" width="126" height="126" border="0"></a></td>
+<td width="10"></td>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004024000001/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb92038.jpg?_ex=126x126" alt="薄型文庫書棚 幅60" width="126" height="126" border="0"></a></td>
+<td width="10"></td>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004022000003/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb92018-17d.jpg?_ex=126x126" alt="ダブルスライド本棚 奥深 幅90" width="126" height="126" border="0"></a></td>
+<td width="10"></td>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004031000010/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb92035.jpg?_ex=126x126" alt="薄型窓下収納庫 幅60cm" width="126" height="126" border="0"></a></td>
+<td width="10"></td>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004026000002/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb23687.jpg?_ex=126x126" alt="キーボックス" width="126" height="126" border="0"></a></td>
+<td width="10"></td>
+<td bgcolor="#cc0000"><a href="http://www.sangojapan.com/shopdetail/004008000014/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/iw-k-153704.jpg?_ex=126x126" alt="ウッドラック" width="126" height="126" border="0"></a></td>
+</tr>
+    <tr>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004028000003/order/" target="_blank">A4対応書棚</a></td>
+      <td></td>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004032000002/order/" target="_blank">大容量書棚</a></td>
+      <td></td>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004024000001/order/" target="_blank">コミックにピッタリ本棚</a></td>
+      <td></td>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004022000003/order/" target="_blank">大判(B6)コミック対応</a></td>
+      <td></td>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004031000010/order/" target="_blank">CDたっぷり収納</a></td>
+      <td></td>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004026000002/order/" target="_blank">全段カギ付き(鍵同一)</a></td>
+      <td></td>
+      <td align="center"><a href="http://www.sangojapan.com/shopdetail/004008000014/order/" target="_blank">天然木の自然の風合い</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+		<!--▼sub▼-->
+		<div id="M_sub" class="M_clearfix">
+
+		<!--▼ログインフォーム▼-->
+			<div id="M_login" class="M_clearfix">
+			<table border=0 cellpadding=0 cellspacing=0><tr><form name=top_form_log action="https://www.makeshop.jp/ssl/?ssltype=main&db=sangoshop" method=post target=_top><td>       ID<input type=text name=id size=8 maxlength=255> パスワード<input type=password name=passwd size=8 maxlength=20>
+        <a href=JavaScript:top_check_log()><img src="/images/454/loginbutton.gif" width="60" height="21" alt="ログイン"></a>
+</td><input type=hidden name=type value=login><input type=hidden name=form_type value=N></form></tr></table>
+			</div>
+		
+			<!--▼サブナビゲーション-->
+			<ul id="M_subNav">
+			  <li><a href=/ >本棚通販TOP</a></li>
+			  <li><a href=/shop/member.html >会員登録</a></li>
+			  <li><a href=/shop/member.html?type=login  >ログイン</a></li>
+			  <li><a href=/shop/basket.html >買い物かご</a></li>
+			  <li><a href=/shop/member.html?type=reserve >ポイント</a></li>
+			  <li id="M_end"><a href="JavaScript:top_sendmail()">サポートセンター</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+	<!--▲end header▲-->
+    
+<script language="JavaScript">
+    function top_sendmail() {
+        window.open("/html/email.html","email","height=100,width=100");
+    }
+    function top_check_log() {
+        if (document.top_form_log.id.value.length==0) {
+            document.top_form_log.id.focus();
+            alert("IDをご入力ください。");return;
+        }
+        if (document.top_form_log.passwd.value.length==0) {
+            document.top_form_log.passwd.focus();
+            alert("パスワードを入力ください。");return;
+        }
+        document.top_form_log.submit();
+    }
+    function sslIdinfo(){
+    window.open("about:blank", "sslIdinfoWindow", "width=640,height=640,scrollbars=yes,resizable=yes");
+    document.sslIdinfoForm.submit();
+    }
+</script>
+
+
+<script>
+function sendmail() {
+    window.open("/html/email.html","email","height=100,width=100");
+}
+function estimate() {
+}
+function check_log() {
+    if (document.search.id.value.length==0) {
+        document.search.id.focus();
+        alert("IDをご入力ください。");
+        return;
+    }
+    if (document.search.passwd.value.length==0) {
+        document.search.passwd.focus();
+        alert("パスワードをご入力ください。");
+        return;
+    }
+    document.formlogin.id.value=document.search.id.value;
+    document.formlogin.passwd.value=document.search.passwd.value;
+    document.formlogin.submit();
+}
+function CheckKey_log() {
+    key=event.keyCode;
+    if (key==13) {
+        check_log()
+    }
+}
+function CheckKey_search()
+{
+    key=event.keyCode;
+    if (key==13) {
+        document.search.submit();
+    }
+}
+function Search(){
+    if (document.search.id || document.search.passwd){
+        document.search.id.value = '';
+        document.search.passwd.value = '';
+    }
+    document.search.submit();
+}
+
+</script>
+
+<table border=0 cellspacing=0 cellpadding=0 width=770 id=makebanner>
+<tr>
+
+<form action="/shop/shopbrand.html" method=post name=search>
+<td valign=top width=150 height=100%> 
+<!--▼左コンテンツ▼-->
+<img src="http://www.sangojapan.com/design/sangoshop/space.gif" width="295" height="1" border="0" alt="s"><br>
+<img src="http://www.sangojapan.com/design/sangoshop/souryoumuryou.gif" width="275" height="65" border="0" alt="どの書棚も家具も送料無料！" style="margin-bottom:5px;"><br>
+<div class="ninja_onebutton">
+<script type="text/javascript">
+//<![CDATA[
+(function(d){
+if(typeof(window.NINJA_CO_JP_ONETAG_BUTTON_c902b96e8096e37d4fcccc010cacc5b2)=='undefined'){
+    document.write("<sc"+"ript type='text\/javascript' src='http:\/\/omt.shinobi.jp\/b\/c902b96e8096e37d4fcccc010cacc5b2'><\/sc"+"ript>");
+}else{
+    window.NINJA_CO_JP_ONETAG_BUTTON_c902b96e8096e37d4fcccc010cacc5b2.ONETAGButton_Load();}
+})(document);
+//]]>
+</script><span class="ninja_onebutton_hidden" style="display:none;"></span><span style="display:none;" class="ninja_onebutton_hidden"></span>
+</div>
+
+<div style="width:295px;">
+<div style="float:left; width:90px;">
+<img src="http://www.rakuten.ne.jp/gold/sangostyle/image/left-ranking2.gif" width="92" height="27" border="0"><br>
+<table cellpadding="0" bgcolor="#cc0000" cellspacing="1" class="left90">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffffff"><img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking1.gif" width="90" height="39" border="0" alt="1位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004032000002/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/kagudoki/cabinet/7518-4color5.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      8,300円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking2.gif" width="90" height="39" border="0" alt="2位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004024000001/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb92038.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      5,980円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking3.gif" width="90" height="39" border="0" alt="3位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004024000004/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/koueki/ako1001105.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      3,790円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking4.gif" width="90" height="39" border="0" alt="4位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004024000006/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/koueki/ako1001107.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      5,980円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking5.gif" width="90" height="39" border="0" alt="5位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004026000002/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb23687.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      3,980円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking6.gif" width="90" height="39" border="0" alt="6位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004025000002/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/na/na-to-0078b.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      7,900円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking7.gif" width="90" height="39" border="0" alt="7位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004022000003/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb92018-17d.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      7,980円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking8.gif" width="90" height="39" border="0" alt="8位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004008000014/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/iw-k-153704.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      8,800円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking9.gif" width="90" height="39" border="0" alt="9位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004028000003/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb96009-10-1c.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      3,980円<br>
+      <img src="http://www.rakuten.ne.jp/gold/sangostyle/image/ranking10.gif" width="90" height="39" border="0" alt="10位"><br>
+      <a href="http://www.sangojapan.com/shopdetail/004024000003/order/" target="_blank"><img src="http://thumbnail.image.rakuten.co.jp/@0_mall/sangostyle/cabinet/sb24602-03.jpg?_ex=90x90" width="90" height="90" border="0"></a><br>
+      2,980円<br>
+</td>
+    </tbody>
+</table>
+</div>　　
+	<!--  / カテゴリメニュー /  --> 
+<div style="float:left; width:180px; margin-left:5px;">
+<A href="http://www.sangojapan.com/sb92038.html"><IMG src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/sb92038a180x180.jpg" alt="薄型文庫書棚　幅60" width="180" height="180" border="0" style="margin-bottom:10px;"></A><br>
+<a href="http://www.sangojapan.com/html/page4.html" target="_blank"><img src="http://www.sangojapan.com/design/sangoshop/kouan-left.gif" width="180" height="60" border="0" style="margin-bottom:10px;"></a><br>
+<a href="http://www.sangojapan.com/html/page3.html" target="_blank"><img src="http://www.sangojapan.com/design/sangoshop/answer-left2.gif" width="180" height="60" border="0" style="margin-bottom:10px;"></a><br>
+<a href="http://www.sangojapan.com/html/page5.html"><img src="http://www.sangojapan.com/design/sangoshop/hosyou-left.gif" width="180" height="60" border="0" style="margin-bottom:10px;"></a><br>
+<a href="http://www.sangojapan.com/html/page6.html"><img src="http://www.sangojapan.com/design/sangoshop/siyourei-left.gif" width="180" height="60" border="0" style="margin-bottom:10px;"></a><br>
+<a href="http://www.sangojapan.com/html/page7.html#kyarakuta"><img src="http://shopping.c.yimg.jp/lib/kagudoki/kyara-syoukai-ba.jpg" width="180" height="60" border="0" style="margin-bottom:10px;"></a><br>
+<a href="http://www.sangojapan.com/html/page7.html"><img src="http://shopping.c.yimg.jp/lib/kagudoki/taiou-goiken-180b.gif" width="180" height="60" border="0" style="margin-bottom:10px;"></a><br>
+
+	<img src="/design/sangoshop/category_taitle_pink.gif" width="180" height="44" border="0" alt="商品カテゴリー"><br>
+	<div class="left_menu"> 
+	<ul> 
+	<li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/022/X"> 
+		<img src="http://shopping.c.yimg.jp/lib/kagudoki/mini010.gif" alt="本棚スライド（スライド式書棚）" width="41" height="41" />&nbsp;スライド式本棚</a> 
+	</li> 
+	<li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/027/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini101.gif" alt="耐震 つっぱり本棚" width="41" height="41" />&nbsp;耐震 つっぱり本棚</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/024/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini100.gif" alt="薄型 コミック専用本棚" width="41" height="41" />&nbsp;薄型 コミック専用本棚</a> 
+	</li> 
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/025/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini102.gif" alt="回転式本棚" width="41" height="41" />&nbsp;回転式本棚/書棚</a> 
+	</li> 
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/032/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini103.gif" alt="大容量本棚" width="41" height="41" />&nbsp;大容量本棚/書棚</a> 
+	</li> 
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/023/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini104.gif" alt="完成品本棚（組み立て済）" width="41" height="41" />&nbsp;完成品本棚/書棚</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/026/X"> 
+		<img src="http://shopping.c.yimg.jp/lib/kagudoki/mini009.gif" alt="扉付き本棚" width="41" height="41" />&nbsp;扉付き本棚/書棚</a> 
+	</li>
+<li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/028/X"> 
+	  <img src="http://www.sangojapan.com/design/sangoshop/mini105.gif" alt="業務用 A4本棚" width="41" height="41" />&nbsp;業務用 A4本棚</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/029/X"> 
+		<img src="http://shopping.c.yimg.jp/lib/kagudoki/bob-41.jpg" alt="壁面収納本棚" width="41" height="41" />&nbsp;壁面収納本棚</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/030/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini106.gif" alt="マガジンラック" width="41" height="41" />&nbsp;マガジンラック</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/031/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini107.gif" alt="CDラック・DVDラック" width="41" height="41" />&nbsp;CDラック・DVDラック</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/033/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini108.gif" alt="頑丈・強化本棚" width="41" height="41" />&nbsp;頑丈・強化本棚</a> 
+	</li>
+    <li> 
+		<a href="http://www.sangojapan.com/shopbrand/004/008/X"> 
+		<img src="http://www.sangojapan.com/design/sangoshop/mini109.gif" alt="おしゃれに収納本棚" width="41" height="41" />&nbsp;おしゃれに収納本棚</a> 
+	</li>
+	<li class="left_li_bottom"> 
+		<a href="http://www.sangojapan.com/shopbrand/002/X/"> 
+		<img src="http://shopping.c.yimg.jp/lib/kagudoki/mini001.gif" alt="本棚以外の家具" width="41" height="41" />&nbsp;本棚以外の家具</a> 
+	</li>
+
+	</ul>
+	</div>
+<a href="http://www.sangojapan.com/"><img src="/design/sangoshop/bottom_red.gif" width="180" height="17" border="0" alt="本棚通販TOPページへ戻る"></a><br><br>
+
+<div id="M_leftContents">
+
+    <!--▼最近チェックした商品▼
+    <div id="M_recent" class="M_leftBox">
+        <img src="/design/sangoshop/left_recent_pink.gif" alt="最近チェックした商品" width="180" height="44" class="M_contentsTitle">
+        
+        <img height="17"  width="180" src="/design/sangoshop/title_bottom_pink.gif">
+    </div>
+-->
+
+            
+
+    
+<a href="http://www.sangojapan.com/html/ordercontract.html"><img src="http://img11.shop-pro.jp/PA01058/353/etc/staff-side180.jpg" width="180" height="326" border="0" alt="SANGO　スタッフ" style="margin-bottom:10px;"></a><br>
+
+    <!--▼バナー▼-->
+<A href="http://www.sangojapan.com/sb24452.html"><IMG src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/sb24452-53.jpg" alt="コミック収納　幅45" width="180" height="180" border="0" style="margin-bottom:10px;"></A><br>
+
+    
+    <!--▼SHOPTWEET▼-->
+        
+    
+
+<img src="http://count3.makeshop.jp/?code=sangoshop&ref=" width="0" height="0" style="width:0px; height:0px;" />
+<a href="http://www.sangojapan.com/RSS/brand_rss.html" target="blank"><img src="http://shop31.makeshop.jp/images/common/brand_rss_icon.gif" width="72" height="15"></a>
+<A HREF="http://www.kaipara.net/" target="_blank"><IMG SRC="http://www.kaipara.net/imgs/banner8831.gif" alt="ネットショップ検索" border="0"></A><br>
+</div>
+</div>
+</div></td></form>
+
+<form name=formlogin action="https://www.makeshop.jp/ssl/?ssltype=main&db=sangoshop" method=post target=_top>
+<input type=hidden name=id><input type=hidden name=passwd><input type=hidden name=type value=login><input type=hidden name=form_type value="N"></form>
+<td valign=top width=640 align=center><form name="all_view_menu" method="post" action="/shop/shopbrand.html" style="margin: 0;padding: 0;">
+<input type="hidden" name="search" value="">
+</form>
+<script>
+function review_send(){
+    if(document.re_form.review_name.value.length==0){
+         alert('名前を入力して下さい');
+         document.re_form.review_name.focus();
+         return;
+    }
+    if(document.re_form.content.value.length==0){
+         alert('評価内容を入力して下さい');
+         document.re_form.content.focus();
+         return;
+    }
+    document.re_form.RKEY.value = '21b5c74e3ecd2c05c8d4edb1caf0a60d' + McCarthy (1);
+    document.re_form.RDATE.value = '20130301152837';
+    document.re_form.submit();
+}
+function McCarthy (n)
+{
+    if (n > 100)
+        return n - 10;
+    return McCarthy (McCarthy (n + 11));
+}
+</script>
+
+<style type="text/css">
+<!--
+input.m_price{
+    border:0 none;
+    padding-right:3px;
+    text-align:right;
+}
+-->
+</style>
+<form name=form1 method=post action="/shop/basket.html">
+<script>
+ function pagemove(temp) {
+location.href="/shop/shopdetail.html?brandcode=004030000007&search=&page="+temp+"&sort=#review";
+ }
+ function reviewnotice(temp) {
+     window.open("/shop/reviewview.html?brandcode=004030000007&date="+temp,"","width=450,height=400,scrollbars=yes");
+ }
+</script>
+ <script>
+        function bottom_sendmail() {
+            window.open("/html/email.html","email","height=100,width=100");
+        }
+        function bottom_privercy() {
+            window.open("/html/privercy.html","privercy","height=570,width=640,scrollbars=yes");
+        }
+        function bottom_return() {
+            window.open("/html/rtn_goods.html","rtn_goods","height=300,width=500,scrollbars=yes");
+        }
+        </script><div id="twoColumn">
+ 
+    <!--▼メインコンテンツ▼-->
+    <div id="M_mainContents">
+        
+        <!--▼パンくず-->
+        <p id="M_pankuzu">
+        <a href="http://www.sangojapan.com/">本棚通販 TOP</a>&nbsp;> <a href="/shopbrand/004/X/"><font color=#000000>本棚</font></a>
+ &gt; <a href="/shopbrand/004/030/X/"><font color=#000000>マガジンラック</font></a>
+ &gt; <font color=red>パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ</font>
+ 
+        </p>
+        
+        <p id="M_itemList">
+        <span class="M_preview"><&nbsp;<a href="/shopdetail/004030000008/004/030/">[前の商品]</a></span>
+        <span class="M_next"><a href="/shopdetail/004030000011/004/030/">[次の商品]</a>&nbsp;></span>
+        </p>
+        
+        <!--▼商品名-->
+<div  id="M_itemName">
+        <h1>パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ </h1>
+        </div>
+        <ul id="M_snsButtonList" class="M_clearfix">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+        <!--▼商品説明テキスト-->
+        <p id="M_itemDetail">
+        <P><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0009-01.jpg" width=650 
+height=647><BR><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0009-02.jpg" width=650 
+height=510><BR><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0009-03.jpg" width=650 
+height=753><BR></P>
+<P><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0124-02.jpg" width=650 
+height=364><BR><BR><BR><BR><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0124.jpg" width=650 
+height=400><br><br>
+<img src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0142a.jpg" width="650" height="400" border="0"></P><BR><BR><BR>
+<TABLE border=0 cellSpacing=0 cellPadding=2 width=650>
+<TBODY>
+<TR>
+<TD bgColor=#ff8000 colSpan=3 align=middle><B><FONT 
+color=#ffffff>■突っ張りマガジンパーテーション バリエーション■</FONT></B></TD></TR>
+<TR>
+<TD height=3 colSpan=3></TD></TR>
+<TR>
+<TD bgColor=#cccccc align=middle><A 
+href="http://www.sangojapan.com/na-nj-0009.html"><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0009b.jpg"></A></TD>
+<TD width=5></TD>
+<TD bgColor=#cccccc align=middle><A 
+href="http://www.sangojapan.com/na-nj-0010.html"><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0010b.jpg"></A></TD></TR>
+<TR>
+<TD bgColor=#cccccc align=middle><A 
+href="http://www.sangojapan.com/na-nj-0009.html">■幅60cmタイプ</A></TD>
+<TD></TD>
+<TD bgColor=#cccccc align=middle><A 
+href="http://www.sangojapan.com/na-nj-0010.html">■幅90cmタイプ</A></TD></TR>
+<TR>
+<TD colSpan=3 align=right><FONT 
+size=-1>&gt;&gt;商品画像をクリックすると各販売ページへ移動します。</FONT></TD></TR></TBODY></TABLE>
+<TABLE 
+style="BORDER-BOTTOM: #993333 1px solid; BORDER-LEFT: #993333 1px solid; BORDER-TOP: #993333 1px solid; BORDER-RIGHT: #993333 1px solid" 
+border=0 cellSpacing=0 cellPadding=2 width=650>
+<TBODY>
+<TR>
+<TD style="BORDER-BOTTOM: #993333 1px solid" colSpan=2><SPAN 
+style="FONT-SIZE: 12px"><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/pop1.gif" width=10 height=10> 
+<FONT size=2>商品説明</FONT><BR></SPAN></TD></TR>
+<TR>
+<TD colSpan=2><FONT size=2><FONT 
+color=#ff0000><B>※こちらの商品は<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ご注文から10営業日での出荷となります。</B></FONT><BR>パーテーション仕様の突っ張り式ディスプレイラックになります。<BR>雑誌やCDを飾れる面と目隠しの仕切りの両面でお部屋にアクセントを与えます。<BR>国産品で品質も◎。<BR>脚の部分は壁に置く時と間仕切りにする時に付け替えて使用できる様になっています。<BR>リビングやキッチン等さまざまな空間で活躍し、あなたのお部屋を演出します。<BR></FONT></TD></TR>
+<TR>
+<TD style="BORDER-TOP: #993333 1px solid; BORDER-RIGHT: #993333 1px solid" 
+width=351><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/pop1.gif" width=10 
+height=10><FONT size=2>商品サイズ</FONT></TD>
+<TD style="BORDER-TOP: #993333 1px solid" width=288><FONT size=-1><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/pop1.gif" width=10 
+height=10>商品仕様</FONT></TD></TR>
+<TR>
+<TD style="BORDER-BOTTOM: #993333 1px solid; BORDER-RIGHT: #993333 1px solid" 
+vAlign=top width=351><SPAN style="FONT-SIZE: 12px"></SPAN><FONT 
+size=2>サイズ:(約)幅60×奥行16×高さ202〜260cm<BR>目隠し部高さ約182cm<BR></FONT></TD>
+<TD style="BORDER-BOTTOM: #993333 1px solid" vAlign=top width=288><FONT 
+size=2>スチール（エポキシ粉体塗装）<BR>パネル：プリント紙化粧繊維板<BR>日本製<BR>商品重量9kg</FONT> </TD></TR>
+<TR>
+<TD style="BORDER-BOTTOM: #993333 1px solid" colSpan=2><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/pop1.gif" width=10 
+height=10><FONT size=2>注意事項</FONT></TD></TR>
+<TR>
+<TD colSpan=2>
+<TABLE cellSpacing=2 cellPadding=2 width="100%">
+<TBODY>
+<TR>
+<TD bgColor=#ffffff colSpan=2 align=left><FONT 
+size=2>■お客様組み立て<BR></FONT></TD></TR>
+<TR>
+<TD bgColor=#ffffff align=left><FONT size=2>納期</FONT></TD>
+<TD><FONT size=2>※1週間程度お時間をいただく場合があります。<BR>ご予約品は除きます。<BR></FONT><FONT 
+color=#ff0000 
+size=2>▲ご注意<BR>こちらの商品は北海道、沖縄、離島は別途送料がかかります。</FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE border=0 width=648>
+<TBODY>
+<TR>
+<TD>650 
+<DIV 
+style="COLOR: #666666; FONT-SIZE: 2pt">***</DIV></TD></TR></TBODY></TABLE><BR><BR>
+<TABLE border=0 cellSpacing=0 cellPadding=2 width=650>
+<TBODY>
+<TR>
+<TD bgColor=#ff8000 colSpan=7 align=middle><B><FONT 
+color=#ffffff>■こちらもオススメ！■<BR>■突っ張りシリーズ＆パーテーションシリーズ■</FONT></B></TD></TR>
+<TR>
+<TD height=5 colSpan=7></TD></TR>
+<TR>
+<TD bgColor=#eeeeee align=middle><A 
+href="http://www.sangojapan.com/na-nj-0001.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0001tt.jpg"></A></TD>
+<TD width=5></TD>
+<TD bgColor=#eeeeee align=middle><A 
+href="http://www.sangojapan.com/na-nj-0004.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0004tt.jpg"></A></TD>
+<TD width=5></TD>
+<TD bgColor=#eeeeee align=middle><A 
+href="http://www.sangojapan.com/na-nj-0006.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0006tt.jpg"></A></TD>
+<TD width=5></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0009.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0009tt.jpg"></A></FONT></TD></TR>
+<TR>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0001.html" 
+target=_parent>ラダーラック</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0004.html" 
+target=_parent>パーテーション</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0006.html" 
+target=_parent>突っ張りミラー</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0009.html" 
+target=_parent>マガジンラック</A></FONT></TD></TR>
+<TR>
+<TD height=10 colSpan=7></TD></TR>
+<TR>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-006123456.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-006123456tt.jpg"></A></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#fff9ec align=middle><A 
+href="http://www.sangojapan.com/na-nj-0046-48.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0046-48tt.jpg"></A></TD>
+<TD width=5></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0030-34.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0030tt.jpg"></A></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0036-38.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0036tt.jpg"></A></FONT></TD></TR>
+<TR>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-006123456.html" 
+target=_parent>目隠しカーテン</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0046-48.html" 
+target=_parent>突っ張り上棚ラック</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0066.html" 
+target=_parent>家具の上に設置用</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0036-38.html" 
+target=_parent>家具の上に設置用</A></FONT></TD></TR>
+<TR>
+<TD height=10 colSpan=7></TD></TR>
+<TR>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0016-17-18.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0016tt.jpg"></A></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#eeeeee align=middle><A 
+href="http://www.sangojapan.com/na-nj-0019-20-21.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0019tt.jpg"></A></TD>
+<TD width=5></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0088-89.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0088tt.jpg"></A></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0086-87.html" target=_parent><IMG border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0086tt.jpg"></A></FONT></TD></TR>
+<TR>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0016-17-18.html" 
+target=_parent>ボード本体</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0019-20-21.html" 
+target=_parent>ボード連結専用</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0088-89.html" target=_parent>ハンガー 
+ブレザー</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#eeeeee align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0086-87.html" target=_parent>ハンガー 
+ロッカー</A></FONT></TD></TR>
+<TR>
+<TD height=10 colSpan=7></TD></TR>
+<TR>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0055-56-57.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0055tt.jpg"></A></FONT></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#fff9ec align=middle><A 
+href="http://www.sangojapan.com/na-nj-0058-59-60.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0058tt.jpg"></A></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0099-103.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0099tt.jpg"></A></FONT></TD>
+<TD width=5></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0102-106.html" target=_parent><IMG 
+border=0 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-0102tt.jpg"></A></FONT></TD></TR>
+<TR>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/dk-lb90wh-lb-db.html" target=_parent>2面 
+高さ180cm</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0058-59-60.html" target=_parent>3面 
+高さ180cm</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0099-103.html" 
+target=_parent>ワッフルカーテン</A></FONT></TD>
+<TD></TD>
+<TD bgColor=#fff9ec align=middle><FONT size=-1><A 
+href="http://www.sangojapan.com/na-nj-0102-106.html" 
+target=_parent>ワッフルカーテン</A></FONT></TD></TR>
+<TR>
+<TD colSpan=7 align=right><FONT 
+size=-1>&gt;&gt;商品画像をクリックすると各販売ページへ移動します。</FONT></TD></TR></TBODY></TABLE>
+<CENTER><BR><BR><IMG border=0 alt=代金引換はご利用頂けません 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/daibikifuka.gif" width=280 
+height=123><BR><BR></CENTER><IMG 
+src="http://lib.shopping.srv.yimg.jp/lib/kagudoki/na-nj-chuui.gif"> <p align="center"><br><br><img src="http://www.rakuten.ne.jp/gold/kagudoki/image/na-nj-chuui.gif" width="650" height="190" alt="こちらのパーテーションの注意事項"></p>
+        </p> 
+        
+        <div class="M_clearfix">
+        
+            <!--▼商品画像-->
+            <div id="M_imgDetail">
+            <a href="JavaScript:imageview('004030000007.jpg')">
+<img src="/shopimages/sangoshop/0040300000072.jpg" border=0 width=300 alt="パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ" ><br><br>
+</a>
+
+            <a href="JavaScript:imageview('004030000007.jpg')">拡大画像</a>
+            </div>
+        
+            <!--▼商品情報-->
+            <div id="M_itemInfo">
+            商品名：<br>
+            <strong>パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ</strong><br><br>
+           <br>
+            <table border="0" cellpadding="0" cellspacing="0"><tr><td height=30>商品コード : na-nj-0009</td></tr>
+<tr id="M_usualValue"><td height="30"><font color="#a00000">価格 : </font><input name="price2" id="M_price2" size="8" onfocus="document.form1.price2.blur();" value="10,900" class="m_price">円（税込）<input type='hidden' name='taxview'><input type='hidden' name='price1' value='10900' /></td></tr>
+<tr><td height=30>【代金引換不可】</td></tr>
+    <tr><td height=30>
+            <table border=0 cellpadding=0 cellspacing=0>
+            <tr><td rowspan=3 width=30>数量</td>
+            <td rowspan=3 width=30><input type=text name=amount value="1" size=2></td>
+            <td><a href="JavaScript:count_change(0)"><img src="/images/common/basket_up.gif" border=0></a></td>
+            <td rowspan=3>
+                <input type="hidden" name="admin_id" value="sangoshop">
+                <input type="hidden" name="brandcode" value="004030000007">
+            </td>
+            </tr>
+            <tr><td class=line height=1>&nbsp;</td></tr>
+            <tr><td><a href="JavaScript:count_change(1)"><img src="/images/common/basket_down.gif" border=0></a></td></tr>
+            </table><script language='javascript'>
+
+function numberFormat(num){
+    return num.toString().replace(/([\d]+?)(?=(?:\d{3})+$)/g, function(t){ return t + ','; });
+}
+
+function updateOptionPrice(){
+    updateOptionPriceAjax(927, function(option_stock){
+        if(document.form1.price1){
+            document.form1.price1.value = numberFormat(option_stock.no_tax_price);
+        }
+        if(document.form1.price2){
+            document.form1.price2.value = numberFormat(option_stock.price);
+        }
+        if(document.form1.taxview){
+            document.form1.taxview.value = numberFormat(option_stock.tax);
+        }
+        if(document.getElementById("M_point") && option_stock.point>=0){
+                document.getElementById("M_point").innerHTML= numberFormat(option_stock.point);
+        }
+        if(document.getElementById("gmo_point_value")){
+            document.getElementById("gmo_point_value").innerHTML = Math.floor(option_stock.price * 0.015);
+        }
+        if(option_stock.quantity == "0"){
+            alert("該当商品のオプションは品切れです。他の商品を選択してください。");
+            document.form1.spcode.focus();
+        }
+    });
+}
+</script>
+</td></tr><tr><td height=30>カラー <select name="spcode" id="spcode" onchange="javascript:updateOptionPrice()"><option value="0">オプションを選択してください。<option value="0">-----------------<option value="1" >ナチュラル/NJ-0009<option value="2" >ホワイト/NJ-0123<option value="3" >ダークブラウン/NJ-0142</select></td></tr>
+
+<input type=hidden name=brandcode value="004030000007">
+<input type=hidden name=typep value="X">
+<input type=hidden name=ordertype>
+<input type=hidden name=opts>
+</form>
+</table> 
+            <a href="JavaScript:send('','');" 
+><img border="0" align="middle" src="/images/brand/detail_basket4.gif"></a>
+            <a href="JavaScript:send('baro','');" 
+><img border="0" align="middle" src="/images/brand/detail_baro4.gif"></a>
+            <br><br>
+            <p><a href="http://www.sangojapan.com/html/info.html"><img src="/images/common/delivery_preview_icon.gif" align="absmiddle"  alt="ご利用方法" />ご利用方法</a></p>
+            <p><a href="JavaScript:login_chk('004030000007');"
+><img src="/images/brand/detail_wishlist4.gif"  alt="お気に入り登録"></a></p>
+            <p><a href="javascript:go_login();"><img src="/images/common/recomand_mail_button.gif" alt="友達にメールですすめる"></a></p>
+            <p><a href="javascript:product_mail('004030000007','004')" ><img src="/images/common/question_mail_button.gif" alt="商品についての問い合わせ"></a></p>
+
+            </div>
+        </div>
+<br>
+
+        <!--▼パンくず-->
+        <p id="M_pankuzu">
+        <a href="http://www.sangojapan.com/">本棚通販 TOP</a> > <a href="/shopbrand/004/X/"><font color=#000000>本棚</font></a>
+ &gt; <a href="/shopbrand/004/030/X/"><font color=#000000>マガジンラック</font></a>
+ &gt; <font color=red>パーテーション パーテーション 突っ張りマガジンラック 幅60ｃｍ</font>
+ 
+        </p>
+        
+        <p id="M_itemList">
+        <span class="M_preview">< <a href="/shopdetail/004030000008/004/030/">[前の商品]</a></span>
+        <span class="M_next"><a href="/shopdetail/004030000011/004/030/">[次の商品]</a> ></span>
+        </p>
+
+    
+    </div>
+
+</div><tr><td colspan=4><!--▼フッター▼-->
+<div class="M_center">
+
+
+<div id="update">
+<h2>失敗しない本棚通販へご来店ありがとうございます。</h2>
+<dl>
+    <dd class="last">失敗しない本棚通販は、本棚や書棚を作って40年の老舗メーカーと強力タッグを組み、選りすぐりのお安い本棚を厳選し、通販・販売しています。 当社にて企画・デザインされた本棚も販売させて頂いています。弊社オリジナル家具は、ご注文後1〜2営業日以内にて出荷いたします。
+当店本棚通販では、おしゃれな書棚をはじめ、安くてお得なアウトレット品、大切な本の日焼け防止に最適な扉付きタイプやスライド式、移動も便利なキャスター付きといった多数のモデルをご用意。おしゃれに見せるディスプレイラック、材質にもこだわったスチール書棚、木製書棚などハイクオリティな書棚を多数取り揃えております。<br>
+<br>
+特にお勧めなのが、子供（キッズ）部屋にピッタリな漫画（マンガ）やコミック、絵本を収納できる書棚、書斎に是非とも置きたい おしゃれな壁面収納にディスプレイラック、文庫本を収納できる大容量スライド書棚、奥行きが広いA4サイズ対応モデル、おしゃれな北欧風や扉付き書棚など如何でしょうか？<br>
+<br>
+安全面も考慮した転倒防止つっぱり式書棚や場所を選ばないスリムな薄型書棚、隙間（すきま）ラックも大変好評です。<br>
+通販では、なかなか完成品をお届けするのが難しいのですが、安くてお得な完成品をご希望の方には、商品組み立てサービスをご利用下さいませ。おしゃれな書棚を完成品でお届け致します。<br>
+便利にご利用頂けるように各種カード・銀行振り込み・代金引換などお支払方法も充実！ごゆっくりネット通販をお楽しみ下さい。<br>
+</dd>
+</dl>
+<h3>本棚の種類について</h3>
+<dl>
+    <dd class="last">本棚や書棚というと皆様が想像するのは、シンプルなカラーボックスタイプの本棚じゃないでしょうか？勿論、カラーボックスタイプはシンプルで使いやすく、お安い価格で人気の本棚の種類になりますが、現在ではお客様の使用用途や使いやすさを追求して、色々なタイプの本棚が企画・開発されています。コミック（漫画本、文庫本）などの収納を想定した薄型の本棚。1cm間隔で棚板が調整できる本棚やスライド棚が付いた本棚、16cm位のすき間に入る隙間家具や突っ張り式で耐震機能が備わった壁面全部収納できる本棚など様々な本棚や書棚をご用意しています。用途に合わせてごゆっくりお買い物・通販をお楽しみ下さい。
+</dd>
+</dl>
+<h3>本棚の大量注文について</h3>
+<dl>
+    <dd class="last">失敗しない本棚通販では、本棚や書棚の大量注文もお受けしております。マンガ喫茶様や学校・寮などにも多数納品実績がございます。また、家具メーカー直販ですので、短いの納期で本棚をお届け致します。当店本棚通販に掲載の無い書棚でも、ご希望をお聞きしまして、最適の本棚をご提案頂きます。見積書などの各種書類もご用意させて頂きます。お見積もりや納期など、何でも結構ですので、お気軽にお問い合わせ下さい。TEL：073-482-3554
+</dd>
+</dl>
+<h3>失敗しない本棚通販はメーカー直送・通販で送料無料！</h3>
+<dl>
+    <dd class="last">通販では商品の金額に送料が加わるとお支払総額に思った以上に差が付きます。一度他の通販ショップ様とご比較下さい。
+※一部地域・離島では送料を頂戴する場合がございます。
+</dd>
+</dl>
+
+<!-- update --></div>
+<table border=0 width=800px cellpadding=0 cellspacing=0 style="margin:0px auto;">
+<tr><td colspan=4 height=4 class=line>&nbsp;</td></tr>
+<tr height=25>
+<td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22>
+            <td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td>
+            <td width=119><a href="/shopbrand/004/029/X">壁面収納本棚</a></td>
+          </tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/030/X">マガジンラック</a></td></tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/031/X">CDラック・DVDラック</a></td></tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/028/X">業務用 A4本棚</a></td></tr></table></td></tr><tr height=25>
+<td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22>
+            <td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td>
+            <td width=119><a href="/shopbrand/004/027/X">耐震 つっぱり本棚</a></td>
+          </tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/026/X">扉付き本棚</a></td></tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/025/X">回転式本棚</a></td></tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/024/X">薄型 コミック専用本棚</a></td></tr></table></td></tr><tr height=25>
+<td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22>
+            <td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td>
+            <td width=119><a href="/shopbrand/004/023/X">完成品本棚（組み立て済）</a></td>
+          </tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/022/X">本棚スライド（スライド式書棚）</a></td></tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/032/X">大容量本棚</a></td></tr></table></td><td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22><td><img src='/images/white.gif' width=10 height=22></td><td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td><td width=119><a href="/shopbrand/004/033/X">頑丈・強化本棚</a></td></tr></table></td></tr><tr height=25>
+<td width=147><table border=0 cellpadding=0 cellspacing=0 width=100%><tr height=22>
+            <td width=18><img src='/images/common/brand_mcode_dot3.gif' align=absmiddle></td>
+            <td width=119><a href="/shopbrand/004/008/X">おしゃれに収納本棚</a></td>
+          </tr></table></td><td width=147>&nbsp;</td>
+<td width=147>&nbsp;</td>
+<td width=147>&nbsp;</td>
+</tr>
+</table>
+<br>
+<table cellspacing="0" cellpadding="0" width="800" class="M_center">
+<tbody>
+    <tr>
+      <td colspan="2" align="center" valign="middle"><br />
+      <img src="http://img11.shop-pro.jp/PA01058/353/etc/guide.jpg" width="800" height="25" border="0" alt="激安通販サンゴジャパン ｜ 激安本棚・CDラックのアウトレット価格通販のご利用ガイド" /></td>
+    </tr>
+    <tr>
+       <TD colspan="2" width="800" background="/design/sangoshop/read-japan.jpg" height="571" valign="bottom" align="right" style="border: 1px #ff0000 solid;">
+ <TABLE border="0" width="783" height="531">
+        <tbody>
+          <tr>
+            <TD align="left" valign="top" height="157" width="392">全品送料無料中！<BR>
+            ※沖縄や離島地域は別途追加送料が必要です。<BR>
+            ※一部商品に限り、北海道への追加<BR>
+            送料が必要です。<BR>
+            （商品ページの詳細情報に記載あり）<BR>
+            <a href="http://www.sangojapan.com/html/info.html#map3">●詳しくはコチラ</a><BR>
+            </TD>
+            <TD align="left" valign="top" height="157" width="381">商品のご質問等は、以下まで<br />
+            お気軽にお問合せください。<br />
+            MAIL：support@sangojapan.com <BR>
+            TEL ：073-482-3554<br />
+            通販営業日10:00〜18:00にご対応。<br />
+            （激安通販サンゴジャパンの営業日は下のカレンダーを参照ください）</TD>
+          </tr>
+          <tr>
+            <TD align="left" valign="top" height="164" width="392">ご注文の決済方法は、クレジットカード、<BR>
+            銀行振込、代金引換の、4つの決済方法から<br>
+            お選びいただけます。<br />
+            <FONT size="2">(※ 一部に代引引換がご利用不可能な商品もございます。)</FONT><BR>
+            　　　<br />
+            <a href="http://www.sangojapan.com/html/info.html#map2">●詳しくはコチラ</a><BR>
+            <BR>
+            <A href="http://www.sangojapan.com/html/page9.html" target="_blank">●電子領収書をご希望の方はコチラ</A></TD>
+            <TD align="left" valign="top" height="164" width="381">基本ご注文後、７日以内にお届け致しております。<BR>
+            ※ お届け地域により、ご対応できない<br>
+            場合がございます。<BR>
+            <br />
+            <a href="http://www.sangojapan.com/html/info.html#map3">●詳しくはコチラ</a></TD>
+          </tr>
+          <tr>
+            <TD align="left" valign="top" height="196" width="392">初期不良の場合のみ、対応致します。<BR>
+            まず、メール・電話にてご連絡下さい。商品到着後は、すぐに<BR>
+            商品を確認して頂き、ご注文の商品・数量に間違いがないか、<BR>
+            汚れや破損がないか、確認願います。<BR>上記の様な不備がある場合は、商品<BR>到着後<B>
+<FONT color=#ff0000>１週間以内</FONT></B>にご連絡願います。<BR>　　　　<a href="http://www.sangojapan.com/html/info.html#map5"><br />
+            ●詳しくはコチラ</a></TD>
+            <TD align="left" valign="top" height="196" width="381">　　<img src="http://image.rakuten.co.jp/kagudoki/cabinet/carender-all-new2.gif" border="0" alt="激安通販サンゴジャパンカレンダー"></TD>
+          </tr>
+        </tbody>
+      </TABLE>
+      </TD>
+    </tr>
+    <tr>
+      <td colspan="2" height="10"></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" height="5" background="http://img11.shop-pro.jp/PA01058/353/etc/bg1.gif"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" bgcolor="#f7d6d6"><img src="http://img11.shop-pro.jp/PA01058/353/etc/padlock.gif" width="15" height="15" border="0" />&nbsp;個人情報のお取り扱いについて
+      <table>
+        <tbody>
+          <tr>
+                      <td width="697">当店本棚通販では、お買い物やプレゼント応募・メールニュース購読などのサービスをご利用頂いたお客様の個人情報（ご住所・氏名・メールアドレスなど）の保護については、最大限の注意を払っております。<br />
+                        <br />
+                        個人情報は、弊社の業務遂行のためにのみ利用し管理しています。<br />
+                        個人情報は、官公庁などの公的機関から法律に定める権限に基づき開示を求められた場合以外は、事前の同意なしに第三者への開示はいたしません。<br />
+                        また、ご購入情報はSSL技術を使って暗号化することで保護しております。<br />
+                        <br />
+                        ○「SSL」とは情報を暗号化することで、データの盗聴や改ざん防止送受信する機能です。<br />
+                        個人情報を取り扱うページ（決済ページ、お問合せページ等）は、全てSSLを導入して暗号化を行い、<br />
+                        入力情報の安全性を高めております。<br />
+                        </td>
+          </tr>
+        </tbody>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" height="5" background="http://img11.shop-pro.jp/PA01058/353/etc/bg2.gif"></td>
+  </tr>
+</table>
+<div align="center"><a href="http://www.sangojapan.com/html/page8.html">相互リンク集</a></div>
+<br>
+<a href="http://shop.sango.me/" target="_blank">本棚 激安</a>｜<a href="http://www.sangoshop.jp/" target="_blank">耐震 家具 通販</a>｜<a href="http://www.sangojapan.com/" target="_blank">本棚 通販</a>｜<a href="http://www.gyouhan.com/" target="_blank">業務販売.com店</a>｜<a href="http://sango.tv/" target="_blank">sango.tv 家具動画</a>｜<a href="http://www.e-sango.jp/" target="_blank">有限会社 山五</a><br>
+<br>
+<div id="M_footer">
+    <p class="M_copyright">
+当サイトに掲載されているすべての文章や画像などの無断転載・引用はご遠慮ください。 <br>
+    Copyright &copy; <a href="http://www.sangojapan.com" target=_top>本棚通販</a>&nbsp;All Rights Reserved. 073-482-3554<br>
+    店舗名 : 本棚通販 &nbsp; 運営統括責任者名: <a href="#" onclick="javascript:this.href='mailto:'+decrypt_email(9,'bdyyxac@bjwpxsjyjw.lxv');">辻洋一</a><br>
+    <a href="JavaScript:bottom_privercy()">個人情報保護ポリシー</a> 個人情報担当者 : <a href="#" onclick="javascript:this.href='mailto:'+decrypt_email(9,'bdyyxac@bjwpxsjyjw.lxv');">辻洋一</a> &nbsp;
+    <a href="/html/ordercontract.html">特定商取引に関する法律に基づく表示</a><br>
+    事務所の所在地 : 和歌山県海南市南赤坂11和歌山リサーチラボ3F </p>
+</div>
+
+<!--#M_container-->
+</div>
+</td></tr>
+</table>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15575590-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-15575590-4");
+    pageTracker._setDomainName("none");
+    pageTracker._setAllowLinker(true);
+    pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+        </body>
+        </html>    <script type="text/javascript" src="http://stream.shoplive.jp/extend/js/sangoshop/927.js?r=675068256"></script>
+    <script type="text/javascript" src="http://img.shoplive.jp/player/player.js"></script>
+    <script type="text/javascript">
+        if (typeof MKMTB3902DF06A0D1B06 != 'undefined') {
+            document.getElementById('malltb_video_player').style.display = "block";
+            MTBPlayer(MKMTB3902DF06A0D1B06.toString(), {autoplay:false, skin:'shopdetail', container:'malltb_video_player'});
+        }
+    </script><script type="text/javascript" src="https://www.makeshop.jp/ssl/gmo_point_card_js.html?callback=showQuickOrderButton&db=sangoshop&qc=1"></script>
+<script>
+// 最近チェックした商品
+(function(key, uid){
+	var max = 4;
+	
+    if (key == '' || uid == '') {
+        return;
+    }
+	
+    var products = (function(key){
+        if (!document.cookie) {
+            return '';
+        }
+        var cookieArray = document.cookie.split(';');
+        for (var i=0; i<cookieArray.length; i++) {
+            var targetCookie = cookieArray[i].replace(/^\s+|\s+$/g, '');
+            var valueIndex = targetCookie.indexOf('=');
+            if (valueIndex != -1 && targetCookie.substring(0, valueIndex) == key) {
+                return unescape(targetCookie.slice(valueIndex + 1));
+            }
+        }
+        return '';
+    })(key);
+
+    if (products != '' && products.indexOf(',') == -1) {
+        return;
+    }
+    
+    var result = uid + ',';
+    if (products != '') {
+        var count = 0;
+    	var products_array = products.split(',');
+    	for (var i=0; i<products_array.length; i++) {
+            if (products_array[i] != uid) {
+            	result += products_array[i] + ',';
+            	count++;
+            }
+            if ((max - 1) <= count) {
+                break;
+            }
+    	}
+    }
+    var expires = new Date();
+    expires.setTime(expires.getTime() + 90 * 24 * 60 * 60 * 1000);
+    document.cookie = key + '=' + escape(result) + '; expires=' + expires.toGMTString() + '; path=/;';
+})('chr_id', '927');
+</script>

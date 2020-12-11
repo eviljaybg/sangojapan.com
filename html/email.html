@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<title>お問い合わせ</title>
+<style type="text/css">
+<!--
+.lims {font-size:9pt;}
+.woong {font-size:9pt;line-height:130%}
+.line {font-size:1pt; }
+a{text-decoration:none ;}
+A:link { text-decoration:none; color:#040f6f;}
+A:visited { text-decoration:none; color:#040f6f;}
+A:hover { color:#dc143c; text-decoration:underline;}
+-->
+</style>
+<script type="text/javascript" src="script.js"></script>
+<script>
+function send()
+{
+    if(document.sendmail.sender.value.length==0)
+    {
+        alert("送信者のメールアドレスをご入力ください。");document.sendmail.sender.focus();return;
+    }
+    if(document.sendmail.subject.value.length==0)
+    {
+        alert("タイトルをご入力ください。");document.sendmail.subject.focus();return;
+    }
+    if(document.sendmail.content.value.length==0)
+    {
+        alert("内容をご入力ください。");document.sendmail.content.focus();return;
+    }
+    if (check_hantai(document.sendmail.sender)>0) {
+        return;
+    }
+    if (check_kana(document.sendmail.subject)>0) {
+        return;
+    }
+    if (check_kana(document.sendmail.content)>0) {
+        return;
+    }
+    if(check_email(document.sendmail.sender) == false) {
+        alert('E-mailに正しいメールアドレスを入力して下さい。');
+        return;
+    }
+    document.sendmail.send.value="email";
+    document.sendmail.submit();
+}
+function check_email(obj) {
+    if(!obj.value.match(/^[0-9a-zA-Z_\.-]+@[0-9a-zA-Z_\.-]+\.[A-Za-z]+$/i)) { 
+        return false; 
+    } else return true;
+}
+function check_kana(obj) {
+    kekka=0;
+    txt = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯｰ､｡｢｣ﾞﾟ";
+    for (i=0; i<obj.value.length; i++) {
+        if (txt.indexOf(obj.value.charAt(i),0) >= 0) {
+            kekka++;
+        }
+    }
+
+    if (kekka>0) {
+        alert("半角カナ文字が含まれています。");
+        obj.focus();
+    }
+    return kekka;
+}
+function check_hantai(obj) {
+    kekka=0;
+    for(i=0; i<obj.value.length; i++) {
+        dore=escape(obj.value.charAt(i));
+        if(navigator.appName.indexOf("Netscape")!=-1) {
+            if(dore.length>3 && dore.indexOf("%")!=-1)kekka++;
+        } else {
+            if(dore.indexOf("%uFF")!=-1 && '0x'+dore.substring(2,dore.length) < 0xFF60)kekka++;
+            else if(obj.value.match(/\W/g) != null && dore.length == 6)kekka++;
+        }
+    }
+    if(kekka>0) {
+        alert("全角文字が含まれています。\n半角で入力してください。");
+        obj.focus();
+    }
+    return kekka;
+}
+</script>
+</head>
+<body bgcolor="#ffffff" topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+<script>window.moveTo(10,10);window.resizeTo(444,450);</script>
+<center>
+<form name=sendmail method=post action="email.html">
+    <table border=0 cellpadding=0 cellspacing=0 width=434>
+        <tr>
+            <td height=15 colspan=3 width=434><img src="/images/common/email_logo.gif"></td>
+        </tr>
+        <tr>
+            <td width=6 class=line rowspan=6 background="/images/common/email_left.gif">&nbsp;</td>
+            <td width=422 class=line height=10>&nbsp;</td>
+            <td width=6 class=line rowspan=6 background="/images/common/email_right.gif">&nbsp;</td>
+        </tr>
+        <tr>
+            <td width=422 align=center>
+                <table border=0 cellpadding=0 cellspacing=0 width=400>
+                    <tr>
+                        <td align=right width=80><font class=woong>受信先</font></td><td class=line width=10 rowspan=3>&nbsp;</td>
+                        <td class=woong width=240 align="left"><b><font color=#2E627A><script>document.write(decrypt_email(9,'bdyyxac@bjwpxsjyjw.lxv'));</script></font></b></td>
+                        <td rowspan=3 align=center width=70><img src="/images/common/email_small_logo.gif"></td>
+                    </tr>
+                    <tr>
+                        <td align=right><font class=woong>E-mail</font></td>
+                        <td align="left"><input type=text name=sender size=25 maxlength="100" STYLE="font-size:9pt; color:#45250C; background-color:#FFFFFF; border-width:1px; border-color:#B3B3B3; border-style:solid;"></td>
+                    </tr>
+                    <tr>
+                        <td align=right><font class=woong>タイトル</font></td>
+                        <td align="left"><input type=text name=subject size=40 maxlength=100 STYLE="font-size:9pt; color:#45250C; background-color:#FFFFFF; border-width:1px; border-color:#B3B3B3; border-style:solid;" value=""></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td class=line height=1>&nbsp;</td></tr>
+        <tr>
+            <td class=line width=422 align=center>
+                <textarea name=content cols=60 rows=15 wrap=off STYLE="font-size:9pt; color:#45250C; background-color:#FFFFFF; border-width:1px; border-color:#B3B3B3; border-style:solid;"></textarea>
+            </td>
+        </tr>
+        <tr><td class=line height=10>&nbsp;</td></tr>
+        <tr>
+            <td align=center>
+                <a href="JavaScript:send()"><img src="/images/common/email_send.gif" border=0></a>
+                <a href="JavaScript:window.close()"><img src="/images/common/email_close.gif" border=0></a>
+            </td>
+        </tr>
+        <tr><td width=434 colspan=3><img src="/images/common/email_bottom.gif"></td></tr>
+    </table>
+    <input type=hidden name=send>
+</form>
+<script>document.sendmail.sender.focus();</script>
+</body>
+</html>
